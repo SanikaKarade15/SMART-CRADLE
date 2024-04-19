@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.0.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    
+    <script src="app.js"></script>
+
+      <!-- Unicons -->
+      <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css" />
+    <title>Smart Cradle</title>
+  </head>
+  <body>
+    <header class="header">
+      <nav>
+        <div class="nav__bar">
+          <div class="nav__menu__btn" id="menu-btn">
+            <i class="ri-menu-line"></i>
+          </div>
+        </div>
+        <ul class="nav__links" id="nav-links">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#features">Features</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+        <button class="button" id="form-open">Login</button>
+      </nav>
+      <div class="section__container header__container" id="home">
+        <h1>SMART CRADLE FOR BABY</h1>
+        <p>Because your Baby deserves Care!</p>
+      </div>
+    </header>
+
+     <!-- Home -->
+     <section class="home">
+      <div class="form_container">
+        <i class="uil uil-times form_close"></i>
+
+<!-- Login From -->
+        <div class="form login_form">
+          <form action="#">
+            <h2>Login</h2>
+
+            <div class="input_box">
+              <input type="email" placeholder="Enter your email" required />
+              <i class="uil uil-envelope-alt email"></i>
+            </div>
+            <div class="input_box">
+              <input type="password" placeholder="Enter your password" required />
+              <i class="uil uil-lock password"></i>
+              <i class="uil uil-eye-slash pw_hide"></i>
+            </div>
+
+            <div class="option_field">
+              <span class="checkbox">
+                <input type="checkbox" id="check" />
+                <label for="check">Remember me</label>
+              </span>
+              <a href="#" class="forgot_pw">Forgot password?</a>
+            </div>
+
+            <button class="button">Login Now</button>
+
+            <div class="login_signup">Don't have an account? <a href="#" id="signup">Signup</a></div>
+          </form>
+        </div>
+
+
+<!-- Signup From -->
+        <div class="form signup_form">
+          <form action="#">
+            <h2>Signup</h2>
+
+            <div class="input_box">
+              <input type="email" placeholder="Enter your email" required />
+              <i class="uil uil-envelope-alt email"></i>
+            </div>
+            <div class="input_box">
+              <input type="password" placeholder="Create password" required />
+              <i class="uil uil-lock password"></i>
+              <i class="uil uil-eye-slash pw_hide"></i>
+            </div>
+            <div class="input_box">
+              <input type="password" placeholder="Confirm password" required />
+              <i class="uil uil-lock password"></i>
+              <i class="uil uil-eye-slash pw_hide"></i>
+            </div>
+
+            <button class="button">Signup Now</button>
+
+            <div class="login_signup">Already have an account? <a href="#" id="login">Login</a></div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+
+
+    <section class="section__container about__container" id="about">
+      <div class="about__image">
+        <img src="Images/depositphotos_49080337-stock-photo-about-us.jpg" alt="about" />
+      </div>
+      <div class="about__content">
+        <p class="section__subheader">ABOUT US</p>
+        <br>
+        <p class="section__description">
+          A Smart Cradle 
+System offers a real-time resolution to this concern. It consists  of a microphone and two sound sensors to identify the baby’s 
+cries. When crying is detected, the system sends a message through the GSM module to the parent on the mobile phone. A 
+Wiper Motor is used to swing the cradle. with a constant speed. In this project, we will use one dataset i.e. recordings of baby 
+cries. The lower-frequency crying voice will lead to the movement of the toy and on higher frequency music will play including the Mother’s voice. 
+The Temperature sensor notifies the parent about the environmental temperature near the baby and switches on the fan automatically. The speed of 
+the mini fan remains constant as it is not adjustable to different speed settings. The Web Application also includes reminders for scheduled vaccinations and medicines in an application.
+        </p>
+      </div>
+    </section>
+
+    <section class="section__container features__container" id="features">
+      <div class="features__image">
+        <img src="Images/managed_services.jpg" alt="features" />
+      </div>
+      <div class="features__content">
+        <p class="section__subheader">FEATURES</p>
+        <br>
+        <p class="section__description">
+          The Website application is designed in a more user-friendly manner. 
+          Graphics and pictures are used to represent the functionality/options of the smart cradle system. 
+          This will deliver the content to the user and they can easily navigate to their requirements without much frustration. 
+          Smart cradles for babies can be easily controlled by the web application through any kind of device. 
+          The following features are available in it.<br>
+          <br>
+          • Playing Music<br>
+          • Rotation of Toy<br>
+          • Turn on/off the fan<br>
+          • Checking the room temperature<br>
+          • Get notifications about vaccinations
+        </p>
+      </div>
+    </section>
+
+    <section class="section__container contact__container" id="contact">
+      <div class="contact__image">
+        <img src="Images/istockphoto-1365544413-640x640.jpg" alt="contact" />
+      </div>
+      <div class="contact__content">
+        <p class="section__subheader">CONTACT</p>
+        <br>
+        <p class="section__description">
+        Mail: smartcradle@gmail.com<br>
+        Contact: +91881048516455
+        </p>
+      </div>
+    </section>
+
+
+
+    </footer>
+
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script>
+      const menuBtn = document.getElementById("menu-btn");
+const navLinks = document.getElementById("nav-links");
+const menuBtnIcon = menuBtn.querySelector("i");
+
+menuBtn.addEventListener("click", () => {
+  navLinks.classList.toggle("open");
+
+  const isOpen = navLinks.classList.contains("open");
+  menuBtnIcon.setAttribute("class", isOpen ? "ri-close-line" : "ri-menu-line");
+});
+
+navLinks.addEventListener("click", () => {
+  navLinks.classList.remove("open");
+  menuBtnIcon.setAttribute("class", "ri-menu-line");
+});
+const formOpenBtn = document.querySelector("#form-open"),
+  home = document.querySelector(".home"),
+  formContainer = document.querySelector(".form_container"),
+  formCloseBtn = document.querySelector(".form_close"),
+  signupBtn = document.querySelector("#signup"),
+  loginBtn = document.querySelector("#login"),
+  pwShowHide = document.querySelectorAll(".pw_hide");
+
+formOpenBtn.addEventListener("click", () => home.classList.add("show"));
+formCloseBtn.addEventListener("click", () => home.classList.remove("show"));
+
+pwShowHide.forEach((icon) => {
+  icon.addEventListener("click", () => {
+    let getPwInput = icon.parentElement.querySelector("input");
+    if (getPwInput.type === "password") {
+      getPwInput.type = "text";
+      icon.classList.replace("uil-eye-slash", "uil-eye");
+    } else {
+        
+      getPwInput.type = "password";
+      icon.classList.replace("uil-eye", "uil-eye-slash");
+    }
+  });
+});
+
+signupBtn.addEventListener("click", (e) => {
+  e.preventDefault();
+  formContainer.classList.add("active");
+});
+loginBtn.addEventListener("click", (e) => {
+  e.preventDefault();
+  formContainer.classList.remove("active");
+});
+const scrollRevealOption = {
+  distance: "50px",
+  origin: "bottom",
+  duration: 1000,
+};
+
+// header container
+ScrollReveal().reveal(".header__container p", {
+  ...scrollRevealOption,
+});
+
+ScrollReveal().reveal(".header__container h1", {
+  ...scrollRevealOption,
+  delay: 500,
+});
+
+// about container
+ScrollReveal().reveal(".about__image img", {
+  ...scrollRevealOption,
+  origin: "left",
+});
+
+ScrollReveal().reveal(".about__content .section__subheader", {
+  ...scrollRevealOption,
+  delay: 500,
+});
+
+ScrollReveal().reveal(".about__content .section__header", {
+  ...scrollRevealOption,
+  delay: 1000,
+});
+
+ScrollReveal().reveal(".about__content .section__description", {
+  ...scrollRevealOption,
+  delay: 1500,
+});
+
+ScrollReveal().reveal(".about__btn", {
+  ...scrollRevealOption,
+  delay: 2000,
+});
+
+
+// features container
+ScrollReveal().reveal(".features__image img", {
+  ...scrollRevealOption,
+  origin: "left",
+});
+
+ScrollReveal().reveal(".features__content .section__subheader", {
+  ...scrollRevealOption,
+  delay: 500,
+});
+
+ScrollReveal().reveal(".features__content .section__header", {
+  ...scrollRevealOption,
+  delay: 1000,
+});
+
+ScrollReveal().reveal(".features__content .section__description", {
+  ...scrollRevealOption,
+  delay: 1500,
+});
+
+ScrollReveal().reveal(".features__btn", {
+  ...scrollRevealOption,
+  delay: 2000,
+});
+
+// contact container
+ScrollReveal().reveal(".contact__image img", {
+  ...scrollRevealOption,
+  origin: "left",
+});
+
+ScrollReveal().reveal(".contact__content .section__subheader", {
+  ...scrollRevealOption,
+  delay: 500,
+});
+
+ScrollReveal().reveal(".contact__content .section__header", {
+  ...scrollRevealOption,
+  delay: 1000,
+});
+
+ScrollReveal().reveal(".contact__content .section__description", {
+  ...scrollRevealOption,
+  delay: 1500,
+});
+
+ScrollReveal().reveal(".contact__btn", {
+  ...scrollRevealOption,
+  delay: 2000,
+});
+    </script>
+  </body>
+</html>

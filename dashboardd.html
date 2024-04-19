@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+   <!-- custom css file link  -->
+   <link rel="stylesheet" href="styles.css">
+
+</head>
+<body>
+   
+<div class="container">
+   <button type="submit" class="logout_button">
+      <span class="">Logout</span>
+      <i class="button__icon fas fa-chevron-right"></i>
+   </button>
+
+   <h1 class="title"> SMART CRADLE </h1>
+   <h3 class="subtitle">Dashboard</h3>
+
+   <div class="products-container">
+
+      <div class="product" data-name="p-1">
+         <img src="Images/temp.png" alt="Temperature Image">
+         <h3>Temperature</h3>
+      </div>
+
+      <div class="product" data-name="p-2">
+         <img src="Images/fan.png" alt="Fan Image">
+         <h3>Fan</h3>
+      </div>
+
+      <div class="product" data-name="p-3">
+         <img src="Images/music.png" alt="Music Image">
+         <h3>Music</h3>
+      </div>
+
+      <div class="product" data-name="p-4">
+         <img src="Images/reminder.png" alt="Reminder Image">
+         <h3>Reminder for Vaccinations</h3>
+      </div>
+
+      <div class="product" data-name="p-5">
+         <img src="Images/toy.png" alt="Toy Image">
+         <h3>Toy</h3>
+      </div>
+
+      <div class="product" data-name="p-6">
+         <img src="Images/sound level.png" alt="Sound Level Image">
+         <h3>Sound Level</h3>
+      </div>
+
+   </div>
+
+</div>
+
+<div class="products-preview">
+
+   <div class="preview" data-target="p-1">
+      <i class="fas fa-times"></i>
+      <img src="Images/temp.png" alt="Temperature Image">
+      <h3>Temperature</h3>
+      <p>This is the Temperature of the Room.</p>
+   </div>
+
+   <div class="preview" data-target="p-2">
+      <i class="fas fa-times"></i>
+      <img src="Images/fan.png" alt="Fan Image">
+      <h3>Fan</h3>
+      <p>Turning the fan On & Off</p>
+      <div class="buttons">
+         <a href="#" class="buy">ON</a>
+         <a href="#" class="cart">OFF</a>
+      </div>
+   </div>
+
+   <div class="preview" data-target="p-3">
+      <i class="fas fa-times"></i>
+      <img src="Images/music.png" alt="Music Image">
+      <h3>Music</h3>
+      <p>Play some Music to soothe your baby </p>
+      <div class="buttons">
+         <a href="#" class="buy">ON</a>
+         <a href="#" class="cart">OFF</a>
+      </div>
+   </div>
+
+   <div class="preview" data-target="p-4">
+      <i class="fas fa-times"></i>
+      <img src="Images/reminder.png" alt="Reminder Image">
+      <h3>Reminder</h3>
+      <p>Reminder of the Vaccinations </p>
+   </div>
+
+   <div class="preview" data-target="p-5">
+      <i class="fas fa-times"></i>
+      <img src="Images/toy.png" alt="Music Image">
+      <h3>Toy</h3>
+      <p> Rotation of Toy </p>
+      <div class="buttons">
+         <a href="#" class="buy">ON</a>
+         <a href="#" class="cart">OFF</a>
+      </div>
+   </div>
+
+   <div class="preview" data-target="p-6">
+      <i class="fas fa-times"></i>
+      <img src="Images/sound level.png" alt="Reminder Image">
+      <h3>Sound Level</h3>
+      <p>Level of Sound </p>
+   </div>
+
+</div>
+
+</body>
+
+<!-- js -->
+<script>
+      let preveiwContainer = document.querySelector('.products-preview');
+let previewBox = preveiwContainer.querySelectorAll('.preview');
+
+document.querySelectorAll('.products-container .product').forEach(product =>{
+  product.onclick = () =>{
+    preveiwContainer.style.display = 'flex';
+    let name = product.getAttribute('data-name');
+    previewBox.forEach(preview =>{
+      let target = preview.getAttribute('data-target');
+      if(name == target){
+        preview.classList.add('active');
+      }
+    });
+  };
+});
+
+previewBox.forEach(close =>{
+  close.querySelector('.fa-times').onclick = () =>{
+    close.classList.remove('active');
+    preveiwContainer.style.display = 'none';
+  };
+});
+
+document.querySelector('.logout_button').addEventListener('click', function(event) {
+        event.preventDefault();
+        window.location.href = '/';
+    });
+   </script>
+
+</html>
